@@ -10,9 +10,13 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1>Coming soon stay tuned ..!</h1>
+            <section id="intro">
+            {{ content }}
+            </section>
         </div>
+        {% include scroll.html %}
     </div>
+    {% include footer.html %}
     <script src="{{ "/js/jquery.js" | absolute_url }}"></script>
     <script src="{{ "/js/popper.js" | absolute_url }}"></script>
     <script src="{{ "/js/bootstrap.js" | absolute_url }}"></script>
