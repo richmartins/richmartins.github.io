@@ -48,3 +48,8 @@ plugins:
 
 
 #theme: jekyll-theme-slate
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true

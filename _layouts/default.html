@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="{{ "/styles/style.css" | absolute_url }}" type="text/css" />
 </head>
 <body>
+    <div id="wrapper">
+        <div>
+            <img class="icon-me" alt="icon-me" src="{{ "/assets/icon.png" | absolute_url }}"/>
+            <h3>Welcome to</h3>
+            <h1>my github page</h1>
+            <a href="#about-me"><p><i class="arrow down"></i></p></a>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            {{ content }}
+            <div class="offset-md-1 col-md-8">{{ content }}</div>
+            <div id="menu" class="col-md-2">{% include scroll.html %}</div>
         </div>
-        {% include scroll.html %}
     </div>
     {% include footer.html %}
     <script src="{{ "/js/jquery.js" | absolute_url }}"></script>

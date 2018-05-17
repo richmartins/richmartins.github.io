@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url("font-awesome.min.css");
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  wrapper h1, h3 {
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.25em;
+  }
+
+  #wrapper{
+    min-height: 100%;
+    position: relative;
+    background-image: url("../assets/header5.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    padding: 7.5em 0 2em 0;
+    cursor: default;
+  }
+
+  #wrapper h1 {
+      margin-bottom: 50px;
+  }
+
+ img.icon-me {
+      max-height: 400px;
+      margin-bottom: 75px;
+  }
+
+.img-card {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#scroll-menu {
+    position: absolute;
+}
+
+i {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 9px;
+}
+
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
