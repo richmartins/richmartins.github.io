@@ -1,12 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
-@import url("font-awesome.min.css");
-
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+
   }
 
-  wrapper h1, h3 {
+.cust-container{
+    padding: 20px;
+}
+
+.cust-contianer div {
+    margin: 20px;
+}
+
+/* Header */
+
+  #wrapper h1, h3 {
       font-weight: 400;
       color: #fff;
       line-height: 1.25em;
@@ -34,14 +43,20 @@ html, body {
       margin-bottom: 75px;
   }
 
+/* projects card */
+
 .img-card {
     max-width: 250px;
     max-height: 250px;
 }
 
+/* scroll-menu */
+
 #scroll-menu {
-    position: absolute;
+    position: relative;
 }
+
+/* narrow down */
 
 i {
   border: solid white;
@@ -54,4 +69,30 @@ i {
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+}
+
+/* skills ul */
+
+#skills-div .ul-1 {
+    display: table;
+    margin: 0 auto;
+}
+
+ul#skills-div {
+    list-style: none;
+}
+
+ul#skills-div li {
+    display: inline;
+}
+
+/* interests ul */
+#interests {
+    display: inline;
+}
+
+#interests-div ul{
+    text-decoration: none;
+    list-style-type: none;
+    display: block;
 }
