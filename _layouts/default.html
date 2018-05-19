@@ -8,14 +8,7 @@
     <link rel="stylesheet" href="{{ "/styles/style.css" | absolute_url }}" type="text/css" />
 </head>
 <body>
-    <div id="wrapper">
-        <div>
-            <img class="icon-me" alt="icon-me" src="{{ "/assets/icon.png" | absolute_url }}"/>
-            <h3>Welcome to</h3>
-            <h1>my github page</h1>
-            <a href="#about-me"><p><i class="arrow down"></i></p></a>
-        </div>
-    </div>
+    {% include wrapper.html %}
     <div class="container cust-container">
         <div class="row">
             <div class="offset-md-1 col-md-8">{{ content }}</div>
