@@ -1,74 +1,78 @@
 window.onscroll = function() {
-    scrolly()
+  scrolly()
 };
 
 function scrolly() {
-    if (document.documentElement.scrollTop > wrapper.clientHeight || document.body.scrollTop > wrapper.clientHeight) {
-        document.getElementById("scroll-menu").className = "Fixed";
-    } else {
-        document.getElementById("scroll-menu").className = "";
-    }
+  if (document.documentElement.scrollTop > wrapper.clientHeight || document.body.scrollTop > wrapper.clientHeight) {
+    document.getElementById("scroll-menu").className = "Fixed"
+  } else {
+    document.getElementById("scroll-menu").className = ""
+  }
 }
-
-$( document ).ready(function() {
-    $('h4').each(function() {
-      $elf = $(this);
-        $("#scroll-ul").append(
-            $("<li>").append(
-                $("<a>", { href: "#" + $elf.attr('id') }).text($elf.text()
-                )
-            )
-        )
-    })
-
-    var win = $(this);
-
-    if(win.width() < 770){
-        $('#menu').hide()
+$(document).ready(function() {
+  $("h4").each(function() {
+    $elf = $(this);
+    $("#scroll-ul").append($("<li>").append($("<a>", {
+      href: "#" + $elf.attr("id")
+    }).text($elf.text())))
+  });
+  var a = $(this);
+  if (a.width() < 770) {
+    $("#menu").hide()
+  }
+  $(window).on("resize", function() {
+    if (a.width() <= 770) {
+      $("#menu").hide()
+    } else {
+      $("#menu").show()
     }
-
-    $(window).on('resize', function(){
-        if(win.width() <= 770){
-            $('#menu').hide()
-        }else{
-            $('#menu').show()
-        }
-    })
-
-    // Select all links with hashes
-    $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function(event) {
-        // On-page links
-        if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-          &&
-          location.hostname == this.hostname
-        ) {
-          // Figure out element to scroll to
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          // Does a scroll target exist?
-          if (target.length) {
-            // Only prevent default if animation is actually gonna happen
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000, function() {
-              // Callback after animation
-              // Must change focus!
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) { // Checking if the target was focused
-                return false;
-              } else {
-                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
-              };
-            });
+  });
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(b) {
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+      var c = $(this.hash);
+      c = c.length ? c : $("[name=" + this.hash.slice(1) + "]");
+      if (c.length) {
+        b.preventDefault();
+        $("html, body").animate({
+          scrollTop: c.offset().top
+        }, 1000, function() {
+          var d = $(c);
+          d.focus();
+          if (d.is(":focus")) {
+            return false
+          } else {
+            d.attr("tabindex", "-1");
+            d.focus()
+          }
+        })
+      }
+    }
+  });
+  $.fn.extend({
+    animateCss: function(c, d) {
+      var b = (function(f) {
+        var g = {
+          animation: "animationend",
+          OAnimation: "oAnimationEnd",
+          MozAnimation: "mozAnimationEnd",
+          WebkitAnimation: "webkitAnimationEnd",
+        };
+        for (var e in g) {
+          if (f.style[e] !== undefined) {
+            return g[e]
           }
         }
-      })
+      })(document.createElement("div"));
+      this.addClass("animated " + c).one(b, function() {
+        $(this).removeClass("animated " + c);
+        if (typeof d === "function") {
+          d()
+        }
+      });
+      return this
+    },
+  });
+  $("#wrapper-content").animateCss("bounceInUp", function() {
+    $("#arrow-down").animateCss("bounce")
+  })
 });
