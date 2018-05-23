@@ -44,18 +44,32 @@ html, body {
   }
 
 /* projects card */
+.card {
+    border: none;
+    box-shadow: 0 0.5px 1.5px;
+    max-width: 250em;
+    padding-top: 10px;
+    /*padding: 10px;*/
+    align-items: center;
+    text-align: center;
+}
 
 .img-card {
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 100%;
+    max-height: 50%;
 }
 
-/* scroll-menu */
-
-#scroll-menu {
-    position: relative;
+/* navbar (TOC) */
+#menu{
+    overflow: visible;
 }
 
+div.Fixed{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 2px;
+    z-index: 1;
+}
 /* narrow down */
 
 i {
@@ -64,7 +78,6 @@ i {
   display: inline-block;
   padding: 9px;
 }
-
 
 .down {
     transform: rotate(45deg);
@@ -95,4 +108,8 @@ ul#skills-div li {
     text-decoration: none;
     list-style-type: none;
     display: block;
+}
+
+@media screen and (width: 770px){
+
 }
