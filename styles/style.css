@@ -1,44 +1,81 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif
+  /*font-family: 'Source Sans Pro', sans-serif*/
 }
+
+#wrapper hr {
+    position: relative;
+    display: block;
+    border: 0;
+    top: 4.5em;
+    margin-bottom: 9em;
+    height: 6px;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+}
+
+    #wrapper hr:before, hr:after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        display: block;
+        width: 2px;
+        height: 21px;
+        background: white;
+    }
+
+    #wrapper hr:before {
+        left: -1px;
+    }
+
+    #wrapper hr:after {
+        right: -1px;
+    }
 
 .cust-container {
   padding: 20px
 }
-
 .cust-contianer div {
-  margin: 20px
+    box-shadow: 0 0 20px #333;
+    margin: 20px
+}
+
+.cust-container a:hover {
+    text-decoration: none;
+}
+
+.hidded {
+    opacity:0;
 }
 
 #wrapper-content {
+    margin-top: 10em;
   -webkit-animation-duration: 1.7s;
   -webkit-animation-iteration-count: 1
 }
 
 #arrow-down {
-  -webkit-animation-delay: 2.5s;
+  -webkit-animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite
 }
 
 #wrapper h1, h3 {
   font-weight: 400;
-  color: #fff;
   line-height: 1.25em
 }
 
 #wrapper {
-  min-height: 100%;
-  position: relative;
-  background-image: url("../assets/header.png");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  color: #fff;
-  text-align: center;
-  padding: 7.5em 0 2em 0;
-  cursor: default
+    color: #fff;
+    min-height: 100%;
+    position: relative;
+    background-image: url("../assets/header.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 7.5em 0 2em 0;
+    cursor: default
 }
 
 #wrapper h1 {
@@ -60,10 +97,8 @@ img.icon-me {
 }
 
 .img-card {
-  border-style: solid;
-  border-width: 1px;
   max-width: 90%;
-  min-height: 40%
+  min-height: 40%;
 }
 
 #menu {
@@ -113,16 +148,30 @@ i {
   display: block
 }
 
+#interests-div .ul-1 li {
+    display: inline;
+}
+
 #footer {
-  color: #abb2c6;
-  background-color: #fff;
+    color: #677179;
+      background-color: #fff;
 }
 
 #footer a {
-  color: #abb2c6
+    color: #677179;
 }
 
 #footer a:hover {
-  color: #bfc6c6;
-  text-decoration: none
+    color: #303030;
+    text-decoration: none
+}
+@media screen and (max-width: 770px){
+    #wrapper-content {
+        margin-top: 2em;
+    }
+
+    #wrapper-content h2 {
+        font-size: 0.5em;
+    }
+
 }
