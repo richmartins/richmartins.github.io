@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "/css/animate.css" | absolute_url }}" type="text/css" />
     <link rel="stylesheet" href="{{ "/styles/style.css" | absolute_url }}" type="text/css" />
 </head>
 <body>
-    <div class="container">
+    {% include wrapper.html %}
+    <div class="container cust-container">
         <div class="row">
-            <h1>Coming soon stay tuned ..!</h1>
+            <div class="offset-md-1 col-md-9">{{ content }}</div>
+            <div id="menu" class="col-md-2">{% include scroll.html %}</div>
         </div>
     </div>
+    {% include footer.html %}
     <script src="{{ "/js/jquery.js" | absolute_url }}"></script>
     <script src="{{ "/js/popper.js" | absolute_url }}"></script>
     <script src="{{ "/js/bootstrap.js" | absolute_url }}"></script>
