@@ -87,4 +87,15 @@ $(document).ready(function() {
     $("#wrapper-content").animateCss("bounceInUp", function() {
         $("#arrow-down").animateCss("bounce")
     })
+
+    $(window).resize(function() {
+       // This will fire each time the window is resized:
+       if($(window).width() >= 1024) {
+           // if larger or equal
+           $('.content').removeClass('.hidded');
+       } else {
+           // if smaller
+           $('.content').addClass('.hidded');
+       }
+   }).resize()
 });
