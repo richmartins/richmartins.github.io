@@ -30,12 +30,15 @@ $(document).ready(function() {
     var b = $(this);
     if (b.width() < 770) {
         $("#menu").hide()
+        $(".hidded").removeClass("hidded")
     }
 
     $(window).on("resize", function() {
         if (b.width() <= 770) {
             $("#menu").hide()
+            $(".hidded").removeClass("hidded")
         } else {
+            $(".hidded").addClass("hidded")
             $("#menu").show()
         }
     });
