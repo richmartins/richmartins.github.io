@@ -174,4 +174,17 @@ i {
         font-size: 0.5em;
     }
 
+    #wrapper {
+        color: #fff;
+        min-height: 100%;
+        position: relative;
+        background-image: url("../assets/header.png");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        text-align: center;
+        padding: 1.5em 0 2em 0;
+        cursor: default
+    }
+
 }
