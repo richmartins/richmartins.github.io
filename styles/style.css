@@ -70,7 +70,7 @@ html, body {
     min-height: 100%;
     position: relative;
     background-image: url("../assets/header.png");
-    background-size: cover
+    background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -186,10 +186,11 @@ i {
 
 @media screen and (max-width: 480px){
     #wrapper{
+        background-repeat:no-repeat;
         background-size: contain;
         background-position:center;
     }
     #wrapper-content h2, h3 {
-        font-size: 1.25em;
+        font-size: 1em;
     }
 }
