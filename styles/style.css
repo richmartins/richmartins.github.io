@@ -186,10 +186,15 @@ i {
 
 @media screen and (max-width: 480px){
     #wrapper{
+        min-height: 100%;
+        position: relative;
+        background-image: url("../assets/header.png");
         background-repeat:no-repeat;
         background-size: contain;
-        background-position:center;
+        background-position: center center;
+        background-attachment: fixed;
     }
+    
     #wrapper-content h2, h3 {
         font-size: 1em;
     }
