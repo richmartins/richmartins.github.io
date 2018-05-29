@@ -170,10 +170,6 @@ i {
         margin-top: 2em;
     }
 
-    #wrapper-content h2 {
-        font-size: 0.5em;
-    }
-
     #wrapper {
         color: #fff;
         min-height: 100%;
@@ -187,4 +183,9 @@ i {
         cursor: default
     }
 
+@media screen and (max-width: 480px){
+
+    #wrapper-content h2, h3 {
+        font-size: 1.25em;
+    }
 }
