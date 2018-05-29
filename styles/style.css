@@ -183,6 +183,7 @@ i {
         padding: 1.5em 0 2em 0;
         cursor: default
     }
+}
 
 @media screen and (max-width: 480px){
     #wrapper{
@@ -190,11 +191,11 @@ i {
         position: relative;
         background-image: url("../assets/header.png");
         background-repeat:no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
         background-attachment: fixed;
     }
-    
+
     #wrapper-content h2, h3 {
         font-size: 1em;
     }
