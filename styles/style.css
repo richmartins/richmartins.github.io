@@ -177,7 +177,7 @@ i {
       position: relative;
       background-image: url("../assets/header.png");
       background-size: cover;
-      background-repeat:no-repeat;
+      /*background-repeat:no-repeat;*/
       background-position: center center;
       background-attachment: fixed;
       text-align: center;
@@ -193,7 +193,7 @@ i {
       position: relative;
       background-image: url("../assets/header.png");
       background-size: cover;
-      background-repeat:no-repeat;
+      /*background-repeat:no-repeat;*/
       background-position: center center;
       background-attachment: fixed;
       text-align: center;
