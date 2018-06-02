@@ -172,31 +172,36 @@ i {
     }
 
     #wrapper {
-        color: #fff;
-        min-height: 100%;
-        position: relative;
-        background-image: url("../assets/header.png");
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        text-align: center;
-        padding: 1.5em 0 2em 0;
-        cursor: default
+      color: #fff;
+      min-height: 100%;
+      position: relative;
+      background-image: url("../assets/header.png");
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      text-align: center;
+      /*padding: 7.5em 0 2em 0;*/
+      cursor: default
     }
 }
 
 @media screen and (max-width: 480px){
     #wrapper{
-        min-height: 100%;
-        position: relative;
-        background-image: url("../assets/header.png");
-        background-repeat:no-repeat;
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
+      color: #fff;
+      min-height: 100%;
+      position: relative;
+      background-image: url("../assets/header.png");
+      background-size: cover;
+      background-repeat:no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      text-align: center;
+      /*padding: 3.5em 0 2em 0;*/
+      cursor: default
     }
 
     #wrapper-content h2, h3 {
-        font-size: 1em;
+        font-size: 0.6em;
     }
 }
