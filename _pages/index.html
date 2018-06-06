@@ -24,13 +24,15 @@ layout: default
     </p>
     <div class="card-deck">
         {% for post in site.posts %}
-            <div class="card">
-                <h5 class="card-title">{{ post.title }}</h5>
+            <div class="card cust-card">
                 <img class="img-card" alt="{{ post.title }}" src="{{ post.image }}" />
-                <p class="card-text">
-                    {{ post.description }}
-                </p>
-                <a href="{{ post.urle }}">Visit it</a>
+                <div class="card-content">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">
+                        {{ post.description }}
+                        <br /><a href="{{ post.urle }}">Visit it</a>
+                    </p>
+                </div>
             </div>
         {% endfor %}
     </div>
