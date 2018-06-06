@@ -69,7 +69,7 @@ html, body {
     color: #fff;
     min-height: 100%;
     position: relative;
-    background-image: url("../assets/header.png");
+    background-image: url("../assets/header6.png");
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
@@ -175,7 +175,7 @@ i {
       color: #fff;
       min-height: 100%;
       position: relative;
-      background-image: url("../assets/header.png");
+      background-image: url("../assets/header6.png");
       background-size: cover;
       /*background-repeat:no-repeat;*/
       background-position: center center;
@@ -187,20 +187,6 @@ i {
 }
 
 @media screen and (max-width: 480px){
-    #wrapper{
-      color: #fff;
-      min-height: 100%;
-      position: relative;
-      background-image: url("../assets/header.png");
-      background-size: cover;
-      /*background-repeat:no-repeat;*/
-      background-position: center center;
-      background-attachment: fixed;
-      text-align: center;
-      /*padding: 3.5em 0 2em 0;*/
-      cursor: default
-    }
-
     #wrapper-content h2, h3 {
         font-size: 0.4em;
     }
