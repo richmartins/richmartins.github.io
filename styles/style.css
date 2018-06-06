@@ -55,40 +55,39 @@ html, body {
   -webkit-animation-iteration-count: 1
 }
 
+#wrapper-content h2{
+    font-size: 4em;
+}
+
+
+#wrapper-content h3{
+    font-size: 3em;
+}
+
 #arrow-down {
   -webkit-animation-delay: 0.5s;
   -webkit-animation-iteration-count: infinite
 }
 
-#wrapper h1, h3 {
-  font-weight: 400;
-  line-height: 1.25em
-}
 
 #wrapper {
     color: #fff;
     min-height: 100%;
+    min-width: 100%;
     position: relative;
     background-image: url("../assets/header6.png");
-    background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
     background-attachment: fixed;
     text-align: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     padding: 7.5em 0 2em 0;
-    cursor: default
+    cursor: default;
+    background-size: cover;
 }
 
-#wrapper h1 {
-  margin-bottom: 50px
-}
-
-img.icon-me {
-  max-height: 300px;
-  margin-bottom: 5em
-}
 
 .card {
   border: 0;
@@ -168,14 +167,20 @@ i {
     color: #303030;
     text-decoration: none
 }
-@media screen and (max-width: 770px){
-    #wrapper-content {
-        margin-top: 2em;
-    }
-}
 
 @media screen and (max-width: 480px){
-    #wrapper-content h2, h3 {
-        font-size: 0.4em;
+    #wrapper-content h2{
+        font-size: 2.5em;
+    }
+    #wrapper-content {
+        margin-top: 0px;
+    }
+
+    #wrapper {
+        padding: 5.5em 0 1em 0;
+    }
+
+    #wrapper-content h3{
+        font-size: 1.5em;
     }
 }
