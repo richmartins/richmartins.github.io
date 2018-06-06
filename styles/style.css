@@ -148,11 +148,12 @@ i {
     }
 
     #wrapper {
-        background: url("../assets/header6.png") no-repeat center center fixed;
+        background: url("../assets/header6.png") no-repeat 50% 50% fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-attachment: scroll;
         height:100vh;
         padding: 5.5em 0 1em 0;
     }
