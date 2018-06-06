@@ -4,35 +4,6 @@ html, body {
   /*font-family: 'Source Sans Pro', sans-serif*/
 }
 
-#wrapper hr {
-    position: relative;
-    display: block;
-    border: 0;
-    top: 4.5em;
-    margin-bottom: 9em;
-    height: 6px;
-    border-top: solid 2px #fff;
-    border-bottom: solid 2px #fff;
-}
-
-    #wrapper hr:before, hr:after {
-        content: '';
-        position: absolute;
-        top: -8px;
-        display: block;
-        width: 2px;
-        height: 21px;
-        background: white;
-    }
-
-    #wrapper hr:before {
-        left: -1px;
-    }
-
-    #wrapper hr:after {
-        right: -1px;
-    }
-
 .cust-container {
   padding: 20px
 }
@@ -177,6 +148,12 @@ i {
     }
 
     #wrapper {
+        background: url("../assets/header6.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:100vh;
         padding: 5.5em 0 1em 0;
     }
 
