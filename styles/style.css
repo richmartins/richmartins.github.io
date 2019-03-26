@@ -1,23 +1,23 @@
 html, body {
 	height: 100%;
-	margin: 0
+	margin: 0;
 }
 
 .cust-container {
-	padding: 20px
+	padding: 20px;
 }
 
 .cust-contianer div {
 	box-shadow: 0 0 20px #333;
-	margin: 20px
+	margin: 20px;
 }
 
 .cust-container a:hover {
-	text-decoration: none
+	text-decoration: none;
 }
 
 .hidded {
-	opacity: 0
+	opacity: 0;
 }
 
 ul {
@@ -39,11 +39,11 @@ ul {
 }
 
 #wrapper-content h2 {
-	font-size: 4em
+	font-size: 4em;
 }
 
 #wrapper-content h3 {
-	font-size: 3em
+	font-size: 3em;
 }
 
 #arrow-down {
@@ -52,7 +52,7 @@ ul {
   left: 0;
   right: 0;
 	-webkit-animation-delay: 2.5s;
-	-webkit-animation-iteration-count: infinite
+	-webkit-animation-iteration-count: infinite;
 }
 
 #wrapper {
@@ -99,7 +99,7 @@ ul {
 	max-width: 100%;
 	min-height: 40%;
 	margin-bottom: 1em;
-	box-shadow: 0 .5px .5px 0 gray
+	box-shadow: 0 .5px .5px 0 gray;
 }
 
 .card-content {
@@ -108,7 +108,7 @@ ul {
 }
 
 #menu {
-	overflow: visible
+	overflow: visible;
   padding: .7em;
 }
 
@@ -122,7 +122,7 @@ div.Fixed {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 2px;
-	z-index: 1
+	z-index: 1;;
 }
 
 i {
@@ -134,31 +134,31 @@ i {
 
 .down {
 	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg)
+	-webkit-transform: rotate(45deg);
 }
 
 #about-me {
-	text-align: justify
+	text-align: justify;
 }
 
 #skills-div .ul-1 {
 	text-decoration: none;
 	list-style-type: none;
-	display: block
+	display: block;
 }
 
 #skills-div .ul-2 li {
-	display: inline
+	display: inline;
 }
 
 #interests {
-	display: inline
+	display: inline;
 }
 
 #interests-div ul {
 	text-decoration: none;
 	list-style-type: none;
-	display: block
+	display: block;
 }
 
 #interests-div .ul-1 li {
@@ -167,21 +167,21 @@ i {
 
 #footer {
 	color: #677179;
-	background-color: #fff
+	background-color: #fff;
 }
 
 #footer a {
-	color: #677179
+	color: #677179;
 }
 
 #footer a:hover {
 	color: #303030;
-	text-decoration: none
+	text-decoration: none;
 }
 
 @media screen and (max-width:650px) {
 	.card {
-		margin-bottom: 1em
+		margin-bottom: 1em;
 	}
 
 	.card-deck {
@@ -199,11 +199,11 @@ i {
 	}
 
 	#wrapper-content h2 {
-		font-size: 2.5em
+		font-size: 2.5em;
 	}
 
 	#wrapper-content {
-		margin-top: 0
+		margin-top: 0;
 	}
 
 	#wrapper {
@@ -214,10 +214,10 @@ i {
 		background-size: cover;
 		background-attachment: scroll;
 		height: 100vh;
-		padding: 5.5em 0 1em 0
+		padding: 5.5em 0 1em 0;
 	}
 
 	#wrapper-content h3 {
-		font-size: 1.5em
+		font-size: 1.5em;
 	}
 }
