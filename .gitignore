@@ -2,6 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 _includes/README.md
+Gemfile.lock
 .tweet-cache
 vendor
 .DS_Store
