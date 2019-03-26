@@ -61,7 +61,6 @@ ul {
 	min-width: 100%;
 	position: relative;
 	background-image: url("../assets/bg7.jpg");
-  /* background-color: #000; */
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -79,6 +78,7 @@ ul {
 	flex-direction: row;
   flex-wrap: wrap;
   align-content: stretch;
+  /* align-items: center; */
   height: 80%;
 }
 
@@ -89,7 +89,8 @@ ul {
 	align-items: center;
 	text-align: center;
   width: 50%;
-	padding-bottom: 1em
+	padding-bottom: 1em;
+  margin-bottom: .8em;
 }
 
 .img-card {
@@ -184,13 +185,17 @@ i {
 	}
 
 	.card-deck {
-		flex-direction: column
+		flex-direction: column;
+    align-items: center;
+
 	}
 }
 
 @media screen and (max-width:480px) {
 	.card-deck {
-		flex-direction: column
+		flex-direction: column;
+    align-items: center;
+
 	}
 
 	#wrapper-content h2 {
