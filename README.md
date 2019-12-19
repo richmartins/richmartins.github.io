@@ -1,5 +1,12 @@
 # richmartins.github.io
-my github website
+my github page
+
+# Installation
+
+Install (bundle)[https://bundler.io/]
+
+# Run
+    jekyll serve
 
 # other details
 coming soon

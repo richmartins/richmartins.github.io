@@ -1,52 +1,72 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  /*font-family: 'Source Sans Pro', sans-serif*/
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');html, body {
+    height: 100%;
+    margin: 0;
+font-family: 'Inconsolata', monospace;
+    
 }
 
-#wrapper hr {
-    position: relative;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: .2em 12em;
+}
+
+.col {
+    display: flex;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: .7em 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.item {
+    margin: 0 1em;
+}
+
+.card-deck {
+    display: flex;    
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
     display: block;
-    border: 0;
-    top: 4.5em;
-    margin-bottom: 9em;
-    height: 6px;
-    border-top: solid 2px #fff;
-    border-bottom: solid 2px #fff;
+    overflow: auto;
+    text-align: center;
+    margin: auto .4em;  /* Magic! */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    margin-bottom: .7em;
+    width: 20%;
+    height: 100%;
 }
 
-    #wrapper hr:before, hr:after {
-        content: '';
-        position: absolute;
-        top: -8px;
-        display: block;
-        width: 2px;
-        height: 21px;
-        background: white;
-    }
+.card > img {
+    max-width:100%;
+    max-height:100%;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 10px 10px 0 0;
 
-    #wrapper hr:before {
-        left: -1px;
-    }
-
-    #wrapper hr:after {
-        right: -1px;
-    }
-
-.cust-container {
-  padding: 20px
-}
-.cust-contianer div {
-    box-shadow: 0 0 20px #333;
-    margin: 20px
 }
 
-.cust-container a:hover {
-    text-decoration: none;
+.card > .card-row {
+    text-align: center !important;
+
 }
 
-.hidded {
-    opacity:0;
+.intro {
+  text-align: justify;
+}
+
+.li-justify{
+  text-align: justify;
 }
 
 #wrapper-content {
@@ -76,29 +96,6 @@ html, body {
     text-align: center;
     padding: 7.5em 0 2em 0;
     cursor: default
-}
-
-#wrapper h1 {
-  margin-bottom: 50px
-}
-
-img.icon-me {
-  max-height: 300px;
-  margin-bottom: 5em
-}
-
-.card {
-  border: 0;
-  box-shadow: 0 .5px 1.5px;
-  max-width: 250em;
-  padding-top: 1em;
-  align-items: center;
-  text-align: center
-}
-
-.img-card {
-  max-width: 90%;
-  min-height: 40%;
 }
 
 #menu {

@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ "/css/main.css" | absolute_url }}" type="text/css" />
-    <link rel="stylesheet" href="{{ "/css/animate.css" | absolute_url }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "/styles/animate.css" | absolute_url }}" type="text/css" />
     <link rel="stylesheet" href="{{ "/styles/style.css" | absolute_url }}" type="text/css" />
 </head>
 <body>
     {% include wrapper.html %}
-    <div class="container cust-container">
-        <div class="row">
-            <div class="offset-md-1 col-md-9">{{ content }}</div>
-            <div id="menu" class="col-md-2">{% include scroll.html %}</div>
+    <div class="container">
+        <div class="col">
+            <div class="content">{{ content }}</div>
+            <div id="menu" class="menu">{% include scroll.html %}</div>
         </div>
     </div>
     {% include footer.html %}

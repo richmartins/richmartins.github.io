@@ -5,40 +5,41 @@ layout: default
 ---
 
 
-<div class="hidded">
-    <h4 id="about-me">About me</h4>
-    <hr />
-    <p>
-        I am <b>Richard Victor Martins Tenorio</b> long name huh ?<br />
-        I was born in <b>Brazil</b> in <b>1999</b>. I went to Switzerland when I was five years old. Since, I have been doing my education with the swissy culture and it's very nice so far !<br /><br />
-        Like every child of my generation I started using computers very early and of course started playing video games even more sooner.<br />
-        It was at the end of my obligatory school that I found the love I have now for Computer Science.<br />
-        Ever since I am always pushing my limits in that domain.<br />
-    </p>
-</div>
-<div class="hidded">
-    <h4 id="my-projects">My projects</h4>
-    <hr />
-    <p>
-    Here is some of my projects
-    </p>
-    <div class="card-deck">
-        {% for post in site.posts %}
-            <div class="card">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <img class="img-card" alt="{{ post.title }}" src="{{ post.image }}" />
-                <p class="card-text">
-                    {{ post.description }}
-                </p>
-                <a href="{{ post.urle }}">Visit it</a>
-            </div>
-        {% endfor %}
+<div class="row">
+    <div class="item">
+        <h2 id="about-me">ABOUT ME</h2>
     </div>
+    <div class="item">
+        <p class="intro">
+            I am <b>Richard Victor Martins Tenorio</b> long name huh ? I was born in <b>Brazil</b> in <b>1999</b>. I came to Switzerland when I was five years old. Since then, I have been getting an education within the swissy culture and it's been very nice so far !<br /><br />
+            Like every child of my generation I started using computers very early and of course started playing video games even more sooner. It was at the end of my obligatory school that I feel in love with Computer Science. Ever since I have always been pushing my limits in that domain. Particularly in web developpement
+        </p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="item">
+        <h2 id="my-projects">PROJECTS</h2>
+    </div>
+    <div class="item">
+        <div class="card-deck">
+            {% for post in site.posts %}
+                <div class="card">
+                    <img alt="{{ post.title }}" src="{{ post.image }}" />
+                    <div class="card-row">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">
+                            {{ post.description }}
+                            <br /><a href="{{ post.urle }}">Visit it</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div> 
 </div><br />
-<div class="hidded">
+<div class="row">
     <h4 id="education">Education</h4>
-    <hr />
-    This part only people that knows how school works in Switzerland will understand<br /><br />
     <ul>
         <li>2004 -> 2014
         <p>
@@ -50,31 +51,30 @@ layout: default
         </p></li>
         <li>2015 -> 2016
         <p>
-        It's where I began studying IT at <a href="https://www.etml.ch"><b>ETML</b></a>. Which is a very good school by the way. But I didn't want to do my <b>CFC</b> in a school. I wanted to have responsibility and see how the industry world works. So I just did what we call a "Préapprentissage" there.
-        </p></li>
-        <li>2016 -> 2020
-        <p>
-        It's where I am now as a trainee CFC IT level 1 support at <a href="https://epfl.ch"><b>EPFL</b></a>, one of the best university in europe.
-        </p></li>
+          I began studying IT at <a href="https://www.etml.ch"><b>ETML</b></a>. Which is a very good school by the way. But I didn't want to do my <b>CFC</b> in a school. I wanted to have responsibility and see how the industry world works. I did a " Préapprentissage " there.
+        </p>
+      </li>
+        <li class='li-justify'>2016 <span class="rarr">&rarr;</span> 2020
+            <p>
+            It's where I am now as a trainee CFC IT level 1 support at <a href="https://epfl.ch"><b>EPFL</b></a>, one of the best university in europe.
+            </p>
+        </li>
     </ul>
     <p>
         I have planned to do a Bachelor after at the <a href="https://heig-vd.ch"><b>HEIG</b></a> in Yverdon.
     </p>
 </div>
-<div id="skills-div" class="hidded">
+<div id="skills-div" class="row">
     <h4 id="skills">Skills</h4>
-    <hr />
     <ul class="ul-1">
         <li class="li-1">Web tools
             <ul class="ul-2">
-                <li>HTML |</li>
+                <li>PHP |</li>
+                <li> HTML |</li>
                 <li> CSS |</li>
                 <li> JavaScript |</li>
-                <li> PHP |</li>
-                <li> Bootstrap |</li>
-                <li> Jquery |</li>
                 <li> Vue.js |</li>
-                <li> NPM</li>
+                <li> NodeJs</li>
             </ul>
         </li>
         <li class="li-1"> Programming langage
@@ -92,9 +92,8 @@ layout: default
         </li>
     </ul>
 </div>
-<div id="interests-div" class="hidded">
+<div id="interests-div" class="row">
     <h4 id="interests">Interests</h4>
-    <hr />
     <ul>
         <li>Web</li>
         <li>AI</li>
