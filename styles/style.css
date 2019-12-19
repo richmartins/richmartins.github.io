@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');html, body {
     height: 100%;
     margin: 0;
-font-family: 'Inconsolata', monospace;
+    font-family: 'Inconsolata', monospace;
     
 }
 
@@ -62,27 +62,27 @@ font-family: 'Inconsolata', monospace;
 }
 
 .intro {
-  text-align: justify;
+    text-align: justify;
 }
 
 .li-justify{
-  text-align: justify;
+    text-align: justify;
 }
 
 #wrapper-content {
     margin-top: 10em;
-  -webkit-animation-duration: 1.7s;
-  -webkit-animation-iteration-count: 1
+    -webkit-animation-duration: 1.7s;
+    -webkit-animation-iteration-count: 1
 }
 
 #arrow-down {
-  -webkit-animation-delay: 0.5s;
-  -webkit-animation-iteration-count: infinite
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite
 }
 
 #wrapper h1, h3 {
-  font-weight: 400;
-  line-height: 1.25em
+    font-weight: 400;
+    line-height: 1.25em
 }
 
 #wrapper {
@@ -99,50 +99,50 @@ font-family: 'Inconsolata', monospace;
 }
 
 #menu {
-  overflow: visible
+    overflow: visible
 }
 
 div.Fixed {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 2px;
-  z-index: 1
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2px;
+    z-index: 1
 }
 
 i {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 9px
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 9px
 }
 
 .down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg)
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg)
 }
 
 #about-me {
-  text-align: justify
+    text-align: justify
 }
 
 #skills-div .ul-1 {
-  text-decoration: none;
-  list-style-type: none;
-  display: block
+    text-decoration: none;
+    list-style-type: none;
+    display: block
 }
 
 #skills-div .ul-2 li {
-  display: inline
+    display: inline
 }
 
 #interests {
-  display: inline
+    display: inline
 }
 
 #interests-div ul {
-  text-decoration: none;
-  list-style-type: none;
-  display: block
+    text-decoration: none;
+    list-style-type: none;
+    display: block
 }
 
 #interests-div .ul-1 li {
@@ -151,7 +151,7 @@ i {
 
 #footer {
     color: #677179;
-      background-color: #fff;
+    background-color: #fff;
 }
 
 #footer a {
