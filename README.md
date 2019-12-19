@@ -4,7 +4,7 @@ personnal github page
 
 # installation
 
-[*] install (bundle)[https://bundler.io/]
+* install [bundle](https://bundler.io/)
 
 # Getting started
 
