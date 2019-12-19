@@ -2,8 +2,19 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box
 }
 
+a {
+    color: #3895D3;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #072F5F;
+
+}
 /** BEGIN HEADER **/
 #header-content {
     margin-top: 10em;
@@ -40,10 +51,10 @@ html, body {
 
 /** BEGIN ARROW DOWN HEADER **/
 #arrow-down {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     -webkit-animation-delay: 2.5s;
     -webkit-animation-iteration-count: infinite;
 }
@@ -82,10 +93,13 @@ i {
 
 }
 
-#about-me {
+.title {
     width: 20%;
     margin: 0;
-    border-right: 1px solid gray;
+}
+
+#about-me {
+    border-right: 2.5px solid black;
 }
 
 #intro {
@@ -130,6 +144,51 @@ i {
     height: 50%;
     padding: .1em;
 }
+#education-content{
+    width: 80%;
+}
+
+#education-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.education-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 1.2em 0;
+}
+
+.education-list-item-text {
+    margin-left: 15em;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#skills-content {
+    width: 80%;
+}
+.skills-bar-container {
+    border-radius: 10px;
+    width: 80%;
+    background-color: #ddd;
+}
+.php {width: 45%; background-color: #072F5F; border-radius: 10px;}
+.js {width: 35%; background-color: #072F5F; border-radius: 10px;}
+.unix {width: 40%; background-color: #072F5F; border-radius: 10px;}
+.git {width: 35%; background-color: #072F5F; border-radius: 10px;}
+.docker {width: 20%; background-color: #072F5F; border-radius: 10px;}
+.mysql {width: 30%; background-color: #072F5F; border-radius: 10px;}
+.mongodb {width: 15%; background-color: #072F5F; border-radius: 10px;}
+.java {width: 35%; background-color: #072F5F; border-radius: 10px;}
+.proglanguage {width: 20%; background-color: #072F5F; border-radius: 10px;}
 
 
 

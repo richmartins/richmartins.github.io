@@ -6,14 +6,14 @@ layout: default
 
 
 <div class="row">
-    <h2 id="about-me">ABOUT ME</h2>
+    <h2 id="about-me" class="title">ABOUT ME</h2>
     <span id="intro">
         I am <b>Richard Victor Martins Tenorio</b> long name huh ? I was born in <b>Brazil</b> in <b>1999</b>. I came to Switzerland when I was five years old. Since then, I have been getting an education within the swissy culture and it's been very nice so far !<br /><br />
         Like every child of my generation I started using computers very early and of course started playing video games even more sooner. It was at the end of my obligatory school that I feel in love with Computer Science. Ever since I have always been pushing my limits in that domain. Particularly in web developpement
     </span>
 </div>
 <div class="row">
-    <h2 id="my-projects">PROJECTS</h2>
+    <h2 id="my-projects" class="title">PROJECTS</h2>
     <div class="card-deck">
         {% for post in site.posts %}
             <div class="card">
@@ -30,68 +30,90 @@ layout: default
     </div>
 </div><br />
 <div class="row">
-    <h4 id="education">Education</h4>
-    <hr />
-    <ul>
-      <li class='li-justify'>2004 <span>&rarr;</span> 2015
+    <h2 id="education-title" class="title">EDUCATION</h2>
+    <div id="education-content">
+        <div id="education-list">
+            <span class="education-list-item">
+                <span class="education-list-item-year">2016 &rarr; 2020</span>
+                <span class="education-list-item-text">
+                    CFC & Professional Maturity integrated<br />
+                    support level 1, 2 (Mostly MacOS, also Linux & Windows)<br />
+                    scripting (Bash) <br />
+                    Web dev(PHP, MySQL)<br />
+                    at <a href="https://epfl.ch"><b>EPFL</b></a>, 
+                    one of the best university in europe.
+                </span>
+            </span>
+            <span class="education-list-item">
+                <span class="education-list-item-year">2015 &rarr; 2016</span>
+                <span class="education-list-item-text">
+                    Pre-apprenticeship at <a href="https://www.etml.ch"><b>ETML</b></a>.
+                </span>
+            </span>
+            <span class="education-list-item">
+                <span class="education-list-item-year">2004 &rarr; 2015</span>
+                <span class="education-list-item-text">
+                    End of obligatory school, in Lausanne
+                </span>
+            </span>
+        </div>
         <p>
-          I did my obligatory school and finished with a <b>VSG</b> degree, at Lausanne.
+            I have planned to do a bachelor degree after my CFC, at the <a href="https://heig-vd.ch"><b>HEIG</b></a> in Yverdon.
         </p>
-      </li>
-      <li class='li-justify'>2015 <span>&rarr;</span> 2016
-        <p>
-          I began studying IT at <a href="https://www.etml.ch"><b>ETML</b></a>. Which is a very good school by the way. But I didn't want to do my <b>CFC</b> in a school. I wanted to have responsibility and see how the industry world works. I did a " Préapprentissage " there.
-        </p>
-      </li>
-      <li class='li-justify'>2016 <span class="rarr">&rarr;</span> 2020
-        <p>
-          It's where I am now as a trainee CFC IT level 1 support at <a href="https://epfl.ch"><b>EPFL</b></a>, one of the best university in europe.
-        </p>
-      </li>
-    </ul>
-    <p>
-        I have planned to do a bachelor degree after my CFC, at the <a href="https://heig-vd.ch"><b>HEIG</b></a> in Yverdon.
-    </p>
+    </div>
 </div>
 <div id="skills-div" class="row">
-    <h4 id="skills">Skills</h4>
-    <hr />
-    <ul class="ul-1">
-        <li class="li-1">Web tools
-            <ul class="ul-2">
-                <li>PHP |</li>
-                <li> HTML |</li>
-                <li> CSS |</li>
-                <li> JavaScript |</li>
-                <li> Vue.js |</li>
-                <li> NodeJs</li>
-            </ul>
-        </li>
-        <li class="li-1"> Programming langage
-            <ul class="ul-2">
-                <li>JAVA |</li>
-                <li> C#</li>
-            </ul>
-        </li>
-        <li class="li-1"> Scripting
-            <ul class="ul-2">
-                <li>Shell Bash |</li>
-                <li> Introduction in Perl |</li>
-                <li> AppleScript</li>
-            </ul>
-        </li>
-    </ul>
+    <h2 id="skills" class="title">SKILLS</h2>
+    <div id="skills-content">
+        <p>PHP</p>
+        <div class="skills-bar-container">
+            <div class="skills php">45%</div>
+        </div>
+        <p>JavaScript</p>
+        <div class="skills-bar-container">
+            <div class="skills js">35%</div>
+        </div>
+        <p>Unix-like environement</p>
+        <div class="skills-bar-container">
+            <div class="skills unix">40%</div>
+        </div>
+        <p>Git</p>
+        <div class="skills-bar-container">
+            <div class="skills git">35%</div>
+        </div>
+        <p>Docker</p>
+        <div class="skills-bar-container">
+            <div class="skills docker">20%</div>
+        </div>
+        <p>MySQL</p>
+        <div class="skills-bar-container">
+            <div class="skills mysql">30%</div>
+        </div>
+        <p>MongoDB</p>
+        <div class="skills-bar-container">
+            <div class="skills mongodb">15%</div>
+        </div>
+        <p>JAVA</p>
+        <div class="skills-bar-container">
+            <div class="skills java">35%</div>
+        </div>
+        <p>Python, SWIFT, C#, Ruby</p>
+        <div class="skills-bar-container">
+            <div class="skills proglanguage">20%</div>
+        </div>
+    </div>
 </div>
 <div id="interests-div" class="row">
-    <h4 id="interests">Interests</h4>
-    <hr />
-    <ul>
-        <li>Web</li>
-        <li>AI</li>
-        <li>Cryptography</li>
-        <li>Hacking stuff (go check my root-me <a href="https://www.root-me.org/choukz">profile</a> )</li>
-    </ul>
-    <p>
-        Very enthusiast to learn some <b>Lua</b> and <b>Python</b>
-    </p>
+    <h2 id="interests" class="title">Interests</h2>
+    <div>
+        <ul>
+            <li>Web</li>
+            <li>AI</li>
+            <li>Cryptography</li>
+            <li>Hacking stuff (go check my root-me <a href="https://www.root-me.org/choukz">profile</a> )</li>
+        </ul>
+        <p>
+            Very enthusiast to learn some <b>Lua</b> and <b>Python</b>
+        </p>
+    </div>
 </div>
