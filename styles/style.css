@@ -1,61 +1,25 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-.cust-container {
-    padding: 20px;
-}
-
-.cust-contianer div {
-    box-shadow: 0 0 20px #333;
-    margin: 20px;
-}
-
-.cust-container a:hover {
-    text-decoration: none;
-}
-
-.hidded {
-    opacity: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-.intro {
-  text-align: justify;
-}
-
-.li-justify{
-  text-align: justify;
-}
-
-#wrapper-content {
+/** BEGIN HEADER **/
+#header-content {
     margin-top: 10em;
     -webkit-animation-duration: 1.7s;
     -webkit-animation-iteration-count: 1;
 }
 
-#wrapper-content h2 {
+#header-content h2 {
     font-size: 4em;
 }
 
-#wrapper-content h3 {
+#header-content h3 {
     font-size: 3em;
 }
 
-#arrow-down {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-    -webkit-animation-delay: 2.5s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-#wrapper {
+#header {
     color: #fff;
     min-height: 100%;
     min-width: 100%;
@@ -72,57 +36,16 @@ ul {
     cursor: default;
     background-size: cover;
 }
+/** END HEADER **/
 
-.card-deck {
-    display: flex;
-    flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
-  /* align-items: center; */
-  height: 80%;
-}
-
-.cust-card {
-    display: inline-block;
-    border: 0;
-    box-shadow: 0 .5px 2.5px;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    padding-bottom: 1em;
-    margin-bottom: .8em;
-}
-
-.img-card {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    max-width: 100%;
-    min-height: 40%;
-    margin-bottom: 1em;
-    box-shadow: 0 .5px .5px 0 gray;
-}
-
-.card-content {
-    display: block;
-    height: auto
-}
-
-#menu {
-    overflow: visible;
-  padding: .7em;
-}
-
-#scroll-ul {
-  border-left: 1px solid #D3D3D3;
-  padding-left: .7em;
-}
-
-
-div.Fixed {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2px;
-    z-index: 1;;
+/** BEGIN ARROW DOWN HEADER **/
+#arrow-down {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+    -webkit-animation-delay: 2.5s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 i {
@@ -137,48 +60,83 @@ i {
     -webkit-transform: rotate(45deg);
 }
 
+/** END ARROW DOWN HEADER **/
+
+/** BEGIN CONTENT STYLE **/
+.col {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-content {
+    flex-grow: 2;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: auto;
+    padding: 0 3em;
+    width: auto;
+    margin: 3em 0;
+
+}
+
 #about-me {
+    width: 20%;
+    margin: 0;
+    border-right: 1px solid gray;
+}
+
+#intro {
+    width: 80%;
+    margin: 0 .2em;
     text-align: justify;
 }
 
-#skills-div .ul-1 {
-    text-decoration: none;
-    list-style-type: none;
+#my-projects{
+    width: 20%;
+    margin: 0;
+}
+
+.card-deck {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    margin: auto;  /* Magic! */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    margin-bottom: .7em;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+}
+
+.img-card {
     display: block;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
 }
 
-#skills-div .ul-2 li {
-    display: inline;
-}
-
-#interests {
-    display: inline;
-}
-
-#interests-div ul {
-    text-decoration: none;
-    list-style-type: none;
+.card-content{
     display: block;
+    height: 50%;
+    padding: .1em;
 }
 
-#interests-div .ul-1 li {
-    display: inline
-}
 
-#footer {
-    color: #677179;
-    background-color: #fff;
-}
 
-#footer a {
-    color: #677179;
-}
 
-#footer a:hover {
-    color: #303030;
-    text-decoration: none;
-}
+/** END CONTENT STYLE **/
 
+/** BEGIN MOBILE PART **/
 @media screen and (max-width:650px) {
     .card {
         margin-bottom: 1em;
@@ -198,15 +156,15 @@ i {
 
     }
 
-    #wrapper-content h2 {
+    #header-content h2 {
         font-size: 2.5em;
     }
 
-    #wrapper-content {
+    #header-content {
         margin-top: 0;
     }
 
-    #wrapper {
+    #header {
         background: url("../assets/bg7.jpg") no-repeat 50% 50% fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -217,7 +175,7 @@ i {
         padding: 5.5em 0 1em 0;
     }
 
-    #wrapper-content h3 {
+    #header-content h3 {
         font-size: 1.5em;
     }
 }
