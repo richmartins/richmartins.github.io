@@ -126,28 +126,27 @@ i {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
 }
 
 .card {
-    text-align: center;
-    margin: auto;  /* Magic! */
+    margin: 0 .7em;  /* Magic! */
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,.2);
     margin-bottom: .7em;
     text-align: center;
-    width: 20%;
-    height: 100%;
+    max-width: 20em;
 }
 
 .img-card {
     display: block;
     border-radius: 10px 10px 0 0;
-    max-width: 100%;
+    width: 100%;
+    height: 50%;
     object-fit: cover;
 }
 
 .card-content{
-    display: block;
     height: 50%;
     padding: .1em;
 }
@@ -194,15 +193,15 @@ div#education-list > p {
     width: 80%;
     background-color: #ddd;
 }
-.php {width: 45%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.js {width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.unix {width: 40%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.git {width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.docker {width: 20%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.mysql {width: 30%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.mongodb {width: 15%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.java {width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
-.proglanguage {width: 20%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.php {padding-right: .7em; width: 45%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.js {padding-right: .7em; width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.unix {padding-right: .7em; width: 40%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.git {padding-right: .7em; width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.docker {padding-right: .7em; width: 20%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.mysql {padding-right: .7em; width: 30%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.mongodb {padding-right: .7em; width: 15%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.java {padding-right: .7em; width: 35%; background-color: rgb(78, 105, 133); border-radius: 10px;}
+.proglanguage {padding-right: .7em; width: 20%; background-color: rgb(78, 105, 133); border-radius: 10px;}
 
 .interests-flex {
     display: flex;
