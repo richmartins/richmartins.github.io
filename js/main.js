@@ -12,10 +12,10 @@ var typewriter = new Typewriter(app, {
     loop: true
 });
 
-typewriter.typeString('Hello World !')
+typewriter.typeString('Hello, World !')
     .pauseFor(1500)
     .deleteAll()
-    .typeString('Welcome to another github page')
+    .typeString('Presentation web site')
     .pauseFor(1500)
     .deleteAll()
     .typeString('Happy geek')
