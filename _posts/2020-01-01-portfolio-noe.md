@@ -1,6 +1,6 @@
 ---
-title: "A friend's Protfolio"
+title: "Portfolio"
 image: '/assets/Portfolio-noe.png'
-description: show a friend's portfolio website
+description: "Noé fardel's portfolio"
 urle: 'https://portfolio-noe.netlify.com'
 ---
