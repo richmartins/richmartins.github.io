@@ -280,12 +280,24 @@ footer {
     .interests-flex-items {
         width: 100%;
     }
+
+    #education-content {
+        width:100%;
+    }
+
+    #skills-content {
+        width: 100%;
+    }
+
+    .skills-bar-container {
+        width:100%;
+    }
 }
 
 @media screen and (max-width:480px) {
     .card-deck {
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
 
     }
 
