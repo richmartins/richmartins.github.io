@@ -125,7 +125,7 @@ i {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
 }
 
@@ -205,7 +205,7 @@ div#education-list > p {
 
 .interests-flex {
     display: flex;
-    width: 100%;
+    width: 80%;
     flex-wrap: wrap;
 }
 
