@@ -66,10 +66,11 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-19
 
 DEPENDENCIES
   jekyll!
   jekyll-feed (~> 0.6)
 
 BUNDLED WITH
-   2.1.4
+   2.2.2
