@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'sass-embedded', '~> 0.9.2'
 gem "jekyll", github:"jekyll/jekyll" 
+gem 'jekyll-sass-converter', '~> 2.0'

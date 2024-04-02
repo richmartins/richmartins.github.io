@@ -35,6 +35,7 @@ jobs:
           path: ./src/_site
 
   publish-docker-image:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
