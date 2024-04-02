@@ -1,0 +1,16 @@
+# jekyll
+_site
+.sass-cache
+.jekyll-metadata
+_includes/README.md
+.tweet-cache
+.jekyll-cache
+
+# Git
+# ...
+
+# bundle 
+vendor
+
+# garbage
+.DS_Store
