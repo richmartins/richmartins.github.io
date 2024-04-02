@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY src/_site /var/www/html/
+COPY _site/ /var/www/html/
 
 COPY deployment/default.conf /etc/nginx/conf.d/default.conf.temp
 

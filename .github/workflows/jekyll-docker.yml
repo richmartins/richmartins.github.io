@@ -7,7 +7,30 @@ on:
     branches: [ "prod" ]
 
 jobs:
-  publish-docker-images:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        with:
+          # ruby-version: '3.1' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: ./_site
+
+  publish-docker-image:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,17 +44,10 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Jekyll site and copy to Nginx container
-        run: |
-          docker run --rm \
-            --volume="$PWD/src/:/srv/jekyll" \
-            jekyll/jekyll:latest \
-            jekyll build
-
-          docker create --name jekyll-site ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest
-          docker cp jekyll-site:/srv/jekyll/_site/ ./_site
-          docker rm jekyll-site
-
+      - name: get artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: site
       - name: Build and push Docker Nginx image
         run: |
           docker buildx create --use
@@ -40,4 +56,4 @@ jobs:
             --tag ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-nginx:latest \
             --platform linux/amd64,linux/arm64 \
             --push \
-            --file Dockerfile.nginx . \
+            --file Dockerfile.nginx .
