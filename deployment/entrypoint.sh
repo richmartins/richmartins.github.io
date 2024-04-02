@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-set -eu
-envsubst '${PHP_CONTAINER_NAME}' < /etc/nginx/conf.d/default.conf.temp > /etc/nginx/conf.d/default.conf
-exec "$@" 
