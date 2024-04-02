@@ -7,14 +7,37 @@ on:
     branches: [ "prod" ]
 
 jobs:
-  build:
-
+  publish-docker-images:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Login to github container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Jekyll site and copy to Nginx container
+        run: |
+          docker run --rm \
+            --volume="$PWD/src/:/srv/jekyll" \
+            -it jekyll/jekyll:4 \
+            jekyll build
+
+          docker create --name jekyll-site ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest
+          docker cp jekyll-site:/srv/jekyll/_site/ ./_site
+          docker rm jekyll-site
+
+      - name: Build and push Docker Nginx image
+        run: |
+          docker buildx create --use
+          docker buildx build \
+            --cache-from ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-nginx:latest \
+            --tag ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-nginx:latest \
+            --platform linux/amd64,linux/arm64 \
+            --push \
+            --file Dockerfile.nginx . \
