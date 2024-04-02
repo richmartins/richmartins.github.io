@@ -25,7 +25,7 @@ jobs:
         run: |
           docker run --rm \
             --volume="$PWD/src/:/srv/jekyll" \
-            -it jekyll/jekyll:4 \
+            jekyll/jekyll:latest \
             jekyll build
 
           docker create --name jekyll-site ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest
