@@ -20,15 +20,17 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push Docker Jekyll image
+
+      - name: Build Jekyll site and copy to Nginx container
         run: |
-          docker buildx create --use
-          docker buildx build \
-            --cache-from ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest \
-            --tag ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest \
-            --platform linux/amd64,linux/arm64 \
-            --push \
-            --file Dockerfile.jekyll . \
+          docker run --rm \
+            --volume="$PWD/src/:/srv/jekyll" \
+            -it jekyll/jekyll:4 \
+            jekyll build
+
+          docker create --name jekyll-site ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-jekyll:latest
+          docker cp jekyll-site:/srv/jekyll/_site/ ./_site
+          docker rm jekyll-site
 
       - name: Build and push Docker Nginx image
         run: |
