@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://cdn.boomcdn.com/libs/animate-css/3.7.0/animate.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ "/styles/style.css" | absolute_url }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "/styles/main.css" | absolute_url }}" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -22,14 +26,12 @@
     <title>TENORIO</title>
 </head>
 <body>
-    {% include header.html %}
     <div class="container">
-        <div class="cols">
-            <div class="row-content">{{ content }}</div>
+        <div class="cols"
+            <div class="wrapper">{{ content }}</div>
         </div>
     </div>
     {% include footer.html %}
-    <script src="{{ "/js/jquery.js" | absolute_url }}"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="{{ "/js/main.js" | absolute_url }}"></script>
 </body>

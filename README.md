@@ -1,6 +1,6 @@
 # richmartins.github.io
 
-personnal github page
+Personal portoflio
 
 # installation
 
@@ -9,6 +9,3 @@ personnal github page
 # Getting started
 
     jekyll serve
-
-# other details
-coming soon
