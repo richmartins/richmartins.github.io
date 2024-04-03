@@ -152,6 +152,7 @@ header .contact-links a {
     grid-gap: 1em;
     align-content: center;
     justify-content: center;
+    justify-self: flex-start;
 }
 
 .card {
@@ -221,6 +222,16 @@ footer {
 
 /** BEGIN MOBILE RESPONSIVE **/
 @media screen and (max-width: 768px) {
+    body {
+        background: url("../assets/bg7.jpg") no-repeat 50% 50% fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: scroll;
+        height: 100vh;
+    }
+
     .row {
         flex-direction: column;
     }
