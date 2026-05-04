@@ -1,126 +1,564 @@
 ---
-title: Index
+title: Richard Tenorio — ICT Engineer
 permalink: /
 layout: default
 ---
 
-<header id="header" class="row">
-  <div class="col">
-    <h2 id="name">RICHARD TENORIO</h2>
-    <p class="contact-links">
-        <a href="https://github.com/richmartins" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-        <a href="mailto:richard.tenorio@proton.me?subject=Porftolio" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/richard-tenorio/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    </p>
-    <h4 id="typewriteText"></h4>
-  </div>
-</header>
-
-<div id="about" class="row">
-  <div class="col">
-    <div class="row-content">
-      <h2 class="title">ABOUT ME</h2>
-      <div>
-        <p>
-          Hi, I am <b>Richard Tenorio</b>! I was born in <b>Brazil</b> in
-          <b>1999</b>. I came to Switzerland when I was five years old.
-        </p>
-        <p>
-          Passionate about <b>technology</b> and <b>programming</b>, I have been
-          learning and pushing my limits in those fields since 2015!
-        </p>
-        <p>
-          Currently working as a <b>Information Technology Officer</b>
-          <a href="https://excellgene.com">@ExcellGene SA</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="projects" class="row">
-  <div class="col">
-    <div class="row-content">
-      <h2 class="title">PROJECTS</h2>
-      <div class="card-deck">
-        {% for post in site.posts %}
-        <div class="card">
-          <img class="img-card" alt="{{ post.title }}" src="{{ post.image }}" />
-          <div class="card-content">
-            <h3 class="card-title">{{ post.title }}</h3>
-            <p class="card-text">
-              {{ post.description }}
-              <br /><a href="{{ post.urle }}" target="_blank">Visit it</a>
+<section id="hero" class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="container hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-location-dot"></i>
+                <span>Lausanne, Switzerland</span>
+            </div>
+            <h1 class="hero-name">
+                Richard<br /><span class="gradient-text">Tenorio</span>
+            </h1>
+            <div class="hero-role">
+                <span class="role-prefix">$ </span
+                ><span id="typewriteText"></span>
+            </div>
+            <p class="hero-desc">
+                ICT Engineer &amp; Software Developer with 4+ years of
+                experience designing robust infrastructure and building custom
+                applications.
             </p>
-          </div>
+            <div class="hero-actions">
+                <a href="#experience" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> View Experience
+                </a>
+                <a href="#projects" class="btn btn-ghost">
+                    <i class="fas fa-code-branch"></i> See Projects
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a
+                    href="https://github.com/richmartins"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="GitHub"
+                >
+                    <i class="fab fa-github"></i>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/richard-tenorio/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:richard.tenorio@proton.me" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="education" class="row">
-  <div class="col">
-    <div class="row-content">
-      <h2 class="title">EDUCATION</h2>
-      <div id="education-content">
-        <div id="education-list">
-          <span class="education-list-item">
-            <span class="education-list-item-year">2023 &rarr; 2025</span>
-            <span class="education-list-item-text">
-              <b
-                >Federal Certificate of Specialist in Application Development at
-                <a href="https://idec.ch">IDEC</a></b
-              ><br />
-              Javascript, C#<br />
-              Software Architecture, Design Patterns, UML<br />
-              Agile Methodologies, SCRUM<br />
-              Data Management<br />
-              IT Gouvernance<br />
-              Computer Network & Security<br />
-            </span>
-          </span>
-          <span class="education-list-item">
-            <span class="education-list-item-year">2020 &rarr; 2022</span>
-            <span class="education-list-item-text">
-              <b
-                >Studied software engineering at
-                <a href="https://heig-vd.ch">HEIG-VD</a></b
-              ><br />
-              C, C++<br />
-              Machine Learning, Python<br />
-              Algorithm & Data Structure<br />
-              Discrete Mathematics, Boolean Algebra<br />
-              Computer Network & Security<br />
-            </span>
-          </span>
-          <span class="education-list-item">
-            <span class="education-list-item-year">2016 &rarr; 2020</span>
-            <span class="education-list-item-text">
-              <b>Federal Certificate of Capacity - Computer scientist</b><br />
-              <b>Integrated Technical Professional Maturity at <a href="https://epsic.ch">EPSIC </a>& <a href="https://epfl.ch">EPFL</a></b><br />
-              Java, PHP, Javascript, MySQL<br />
-              Math, Physics, Chimestry<br />
-              IT Operations<br>
-              Database conception <br>
-              Waterfall Methodologies, Project Managment<br />
-              Computer Network & Security<br />
-            </span>
-          </span>
-          <span class="education-list-item">
-            <span class="education-list-item-year">2015 &rarr; 2016</span>
-            <span class="education-list-item-text">
-              <b>Pre-apprenticeship at <a href="https://www.etml.ch">ETML</b></a
-              >.<br />
-              C#<br />
-              Web Design<br />
-              Database conception <br>
-              Waterfall Methodologies, Project Managment<br />
-            </span>
-          </span>
+        <div class="hero-terminal">
+            <div class="terminal-window">
+                <div class="terminal-bar">
+                    <div class="t-dots">
+                        <span class="t-dot t-dot-red"></span>
+                        <span class="t-dot t-dot-yellow"></span>
+                        <span class="t-dot t-dot-green"></span>
+                    </div>
+                    <span class="t-title">richard@srv:~</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="t-line">
+                        <span class="t-pr">❯</span>
+                        <span class="t-cmd">whoami</span>
+                    </div>
+                    <div class="t-line t-out">richard-tenorio</div>
+                    <div class="t-line t-blank"></div>
+                    <div class="t-line">
+                        <span class="t-pr">❯</span>
+                        <span class="t-cmd">cat profile.yaml</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k">role:</span>
+                        <span class="t-v">"ICT Engineer"</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k">location:</span>
+                        <span class="t-v">"Lausanne, CH"</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k">experience:</span>
+                        <span class="t-v">"4+ years"</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k">focus:</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k t-indent">- </span
+                        ><span class="t-v">"DevOps &amp; Infra"</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k t-indent">- </span
+                        ><span class="t-v">"Software Dev"</span>
+                    </div>
+                    <div class="t-line t-out">
+                        <span class="t-k t-indent">- </span
+                        ><span class="t-v">"Cybersecurity"</span>
+                    </div>
+                    <div class="t-line t-blank"></div>
+                    <div class="t-line">
+                        <span class="t-pr">❯</span>
+                        <span class="t-cursor">█</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+    <div class="hero-scroll-hint">
+        <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
+
+<section id="about" class="section about-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">// about</span>
+            <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    ICT Engineer with 4+ years of experience designing,
+                    managing, and optimizing IT infrastructures, as well as
+                    developing applications. Passionate about emerging
+                    technologies in software engineering and cybersecurity.
+                </p>
+                <p>
+                    Born in Brazil, raised in Switzerland — bilingual by
+                    culture, multilingual by passion. I love solving complex
+                    infrastructure challenges and building tools that make teams
+                    more efficient.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">1+</span>
+                        <span class="stat-label">ERP Implemented :')</span>
+                    </div>
+                    <div>
+                        <span class="stat-num">
+                    </div>
+                </div>
+            </div>
+            <div class="about-card">
+                <div class="info-row">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Lausanne, Switzerland</span>
+                </div>
+                <div class="info-row">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:richard.tenorio@proton.me"
+                        >richard.tenorio@proton.me</a
+                    >
+                </div>
+                <div class="info-row">
+                    <i class="fab fa-github"></i>
+                    <a
+                        href="https://github.com/richmartins"
+                        target="_blank"
+                        rel="noopener"
+                        >github.com/richmartins</a
+                    >
+                </div>
+                <div class="info-row">
+                    <i class="fab fa-linkedin"></i>
+                    <a
+                        href="https://www.linkedin.com/in/richard-tenorio/"
+                        target="_blank"
+                        rel="noopener"
+                        >linkedin.com/in/richard-tenorio</a
+                    >
+                </div>
+                <div class="info-row">
+                    <i class="fas fa-language"></i>
+                    <span>FR &middot; PT &middot; EN &middot; DE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">// skills</span>
+            <h2 class="section-title">Tech Stack</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-title">
+                    <i class="fas fa-code"></i> Languages
+                </div>
+                <div class="skill-tags">
+                    <span class="stag">Python</span>
+                    <span class="stag">Go</span>
+                    <span class="stag">PHP</span>
+                    <span class="stag">JavaScript</span>
+                    <span class="stag">PostgreSQL / SQL</span>
+                    <span class="stag">Bash</span>
+                    <span class="stag">Java</span>
+                    <span class="stag">C / C++</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">
+                    <i class="fas fa-layer-group"></i> Frameworks &amp; Tools
+                </div>
+                <div class="skill-tags">
+                    <span class="stag">Git</span>
+                    <span class="stag">React</span>
+                    <span class="stag">Laravel</span>
+                    <span class="stag">Ansible</span>
+                    <span class="stag">Traefik</span>
+                    <span class="stag">Docker</span>
+                    <span class="stag">CI/CD</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">
+                    <i class="fas fa-server"></i> Infrastructure
+                </div>
+                <div class="skill-tags">
+                    <span class="stag">MDM</span>
+                    <span class="stag">App packaging</span>
+                    <span class="stag">EDR</span>
+                    <span class="stag">AWS / Azure</span>
+                    <span class="stag">Virtualisation</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">
+                    <i class="fas fa-globe"></i> Languages spoken
+                </div>
+                <div class="skill-tags">
+                    <span class="stag lang-stag">French (native)</span>
+                    <span class="stag lang-stag">Portuguese (native)</span>
+                    <span class="stag lang-stag">English (C1)</span>
+                    <span class="stag lang-stag">German (A2)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section experience-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">// experience</span>
+            <h2 class="section-title">Work History</h2>
+        </div>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-date">June 2025 — Present</span>
+                        <span class="tl-loc"
+                            ><i class="fas fa-location-dot"></i> Monthey,
+                            CH</span
+                        >
+                    </div>
+                    <h3 class="tl-title">ICT Engineer</h3>
+                    <div class="tl-company">ExcellGene SA</div>
+                    <ul class="tl-list">
+                        <li>
+                            <strong>Architecture &amp; Sysadmin</strong> —
+                            Designed and managed infrastructure of 15+ servers
+                            and 120+ workstations as the company grew from ~10
+                            to ~70 employees.
+                        </li>
+                        <li>
+                            <strong>Internal Development</strong> — Built custom
+                            applications automating key business processes.
+                        </li>
+                        <li>
+                            <strong>ERP Implementation</strong> — Adapted
+                            business processes and developed customizations and
+                            integrations.
+                        </li>
+                        <li>
+                            <strong>IT Security</strong> — Supervised EDR across
+                            the entire fleet, managed vulnerabilities, ran
+                            security audits.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span class="tag">Infrastructure</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">ERP</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-date">March 2022 — June 2025</span>
+                        <span class="tl-loc"
+                            ><i class="fas fa-location-dot"></i> Monthey,
+                            CH</span
+                        >
+                    </div>
+                    <h3 class="tl-title">Information Technology Officer</h3>
+                    <div class="tl-company">ExcellGene SA</div>
+                    <ul class="tl-list">
+                        <li>
+                            Centralized workstation management across the
+                            company.
+                        </li>
+                        <li>Deployed a unified multi-site Wi-Fi solution.</li>
+                        <li>Network segmentation and security hardening.</li>
+                        <li>
+                            Developed an internal ticketing system from scratch.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span class="tag">Networking</span>
+                        <span class="tag">Ansible</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-date">Sep 2020 — Mar 2022</span>
+                        <span class="tl-loc"
+                            ><i class="fas fa-location-dot"></i> Lausanne,
+                            CH</span
+                        >
+                    </div>
+                    <h3 class="tl-title">Computer Scientist</h3>
+                    <div class="tl-company">EPFL — IPHYS-IT</div>
+                    <ul class="tl-list">
+                        <li>
+                            Member of IPHYS-IT team, supporting the LBEM
+                            laboratory (Jacques Dubochet's lab, Nobel Prize
+                            laureate).
+                        </li>
+                        <li>
+                            Infrastructure development and server &amp; network
+                            administration for EPFL's Physics Faculty.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span class="tag">EPFL</span>
+                        <span class="tag">Sysadmin</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-card">
+                    <div class="tl-meta">
+                        <span class="tl-date">Aug 2016 — Jul 2020</span>
+                        <span class="tl-loc"
+                            ><i class="fas fa-location-dot"></i> Lausanne,
+                            CH</span
+                        >
+                    </div>
+                    <h3 class="tl-title">Computer Scientist Trainee</h3>
+                    <div class="tl-company">EPFL — ENAC</div>
+                    <ul class="tl-list">
+                        <li>
+                            IT systems administration and users support for the
+                            Architecture section of EPFL's ENAC Faculty.
+                        </li>
+                    </ul>
+                    <div class="tl-tags">
+                        <span class="tag">EPFL</span>
+                        <span class="tag">Apprenticeship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="freelance-card">
+            <div class="freelance-icon"><i class="fas fa-flag"></i></div>
+            <div class="freelance-body">
+                <h3>CTF Competitor</h3>
+                <p class="freelance-meta">2024 — Present</p>
+                <ul class="freelance-list">
+                    <li>Active competitor in Capture The Flag competitions</li>
+                    <li>Focus areas: web exploitation and forensics</li>
+                    <li>
+                        <a
+                            href="https://ctftime.org/team/375045"
+                            target="_blank"
+                            rel="noopener"
+                            >View team on CTFtime &rarr;</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="freelance-tags">
+                <span class="tag">Web</span>
+                <span class="tag">Forensics</span>
+                <span class="tag">Rev</span>
+            </div>
+        </div>
+
+        <div class="freelance-card">
+            <div class="freelance-icon"><i class="fas fa-laptop-code"></i></div>
+            <div class="freelance-body">
+                <h3>Fullstack Web Developer — Freelance</h3>
+                <p class="freelance-meta">
+                    2019 — Present &middot; Lausanne, CH
+                </p>
+                <ul class="freelance-list">
+                    <li>
+                        <strong>LABO ALICE — EPFL</strong>: student work sharing
+                        platform (+30,000 articles, +600 users)
+                    </li>
+                    <li>
+                        <strong>Brasserie du Montelly</strong>: showcase site
+                        with backoffice for menu management
+                    </li>
+                    <li>
+                        <strong>juliereeb.ch</strong>: portfolio for interior
+                        designer, project gallery &amp; contact form
+                    </li>
+                </ul>
+            </div>
+            <div class="freelance-tags">
+                <span class="tag">React</span>
+                <span class="tag">Laravel</span>
+                <span class="tag">PHP</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">// projects</span>
+            <h2 class="section-title">Featured Work</h2>
+        </div>
+        <div class="projects-grid">
+            {% for post in site.posts %}
+            <div class="project-card">
+                {% if post.image %}
+                <div class="project-img">
+                    <img
+                        src="{{ post.image }}"
+                        alt="{{ post.title }}"
+                        loading="lazy"
+                    />
+                    {% if post.urle %}
+                    <div class="project-overlay">
+                        <a
+                            href="{{ post.urle }}"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-cta"
+                        >
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="project-body">
+                    <h3 class="project-title">{{ post.title }}</h3>
+                    {% if post.description %}
+                    <p class="project-desc">{{ post.description }}</p>
+                    {% endif %} {% if post.urle %}
+                    <a
+                        href="{{ post.urle }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="project-link"
+                    >
+                        <i class="fas fa-arrow-up-right-from-square"></i> Visit
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="education" class="section education-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">// education</span>
+            <h2 class="section-title">Education</h2>
+        </div>
+        <div class="edu-list">
+            <div class="edu-item">
+                <div class="edu-year">2023 - 2025</div>
+                <div class="edu-content">
+                    <h3>
+                        Professional Bachelor — ICT Application Development
+                        Specialist
+                    </h3>
+                    <p>ICT Berufsbildung Schweiz</p>
+                    <div class="edu-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Clean Architecture</span>
+                        <span class="tag">Design Patterns</span>
+                        <span class="tag">Agile / SCRUM</span>
+                        <span class="tag">IT Governance</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-year">2020 - 2022</div>
+                <div class="edu-content">
+                    <h3>Software Engineering</h3>
+                    <p>HEIG-VD</p>
+                    <div class="edu-tags">
+                        <span class="tag">C / C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-year">2016 - 2020</div>
+                <div class="edu-content">
+                    <h3>
+                        CFC — Informaticien d'entreprise &amp; Maturité
+                        Professionnelle (TASV)
+                    </h3>
+                    <p>EPSIC &amp; EPFL</p>
+                    <div class="edu-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

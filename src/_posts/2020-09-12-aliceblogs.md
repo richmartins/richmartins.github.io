@@ -1,6 +1,6 @@
 ---
 title: "Aliceblogs"
-image: '/assets/aliceblogs.png'
-description: wordpress based blog 
-urle: 'https://aliceblogs.ch/'
+image: "/assets/aliceblogs.png"
+description: Customized Wordpress instance for student blogs at EPFL
+urle: "https://aliceblogs.ch/"
 ---

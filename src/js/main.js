@@ -1,40 +1,60 @@
-document.querySelectorAll('.row .col').forEach((row) => {
-    if (row.parentNode.id !== 'header') { 
-        let prev_row_id = row.parentNode.previousElementSibling.id;
-        let html_arrow_up = document.createElement('div');
-        html_arrow_up.className = 'arrow-container bounce animate';
-        html_arrow_up.innerHTML = `<a href="#${prev_row_id}"><p><i class="up"></i><br><i class="up"></i></p></a>`;
-        row.insertBefore(html_arrow_up, row.firstChild);
-    }
+// Typewriter
+new Typewriter('#typewriteText', { loop: true, delay: 60, deleteSpeed: 40 })
+  .typeString('Software Engineer')
+  .pauseFor(1600)
+  .deleteAll()
+  .typeString('DevOps Engineer')
+  .pauseFor(1600)
+  .deleteAll()
+  .typeString('Sys Admin')
+  .pauseFor(1600)
+  .deleteAll()
+  .typeString('CTF Player')
+  .pauseFor(1600)
+  .deleteAll()
+  .typeString('Happy Geek')
+  .pauseFor(1600)
+  .deleteAll()
+  .start();
 
-    if (row.parentNode.nextElementSibling !== null) { 
-        let next_row_id = row.parentNode.nextElementSibling.id;
-        let html_arrow_down = document.createElement('div');
-        html_arrow_down.className = 'arrow-container bounce animated';
-        html_arrow_down.innerHTML = `<a href="#${next_row_id}"><p><i class="down"></i><br /><i class="down"></i></p></a>`;
-        row.appendChild(html_arrow_down);
-    }
-})
+// Sticky nav
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
 
-let typewriter = new Typewriter(document.querySelector('#typewriteText'), {
-    loop: true
+// Mobile nav toggle
+const toggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+// Close mobile nav when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-typewriter.typeString('Hello, World !')
-    .pauseFor(1500)
-    .deleteAll()
-    .typeString('Software Engineer')
-    .pauseFor(1500)
-    .deleteAll()
-    .typeString('Happy geek')
-    .pauseFor(1500)
-    .deleteAll()
-    .typeString('Sys Admin')
-    .pauseFor(1500)
-    .deleteAll()
-    .typeString('DevOps Engineer')
-    .pauseFor(1500)
-    .deleteAll()
-    .typeString('CTF Player')
-    .pauseFor(1500)
-    .start();
+// Active nav link highlight on scroll
+const sections = document.querySelectorAll('section[id]');
+const links    = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const match = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
+// Fade-in on scroll
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.tl-card, .project-card, .skill-card, .edu-item, .about-card, .freelance-card').forEach(el => {
+  el.classList.add('fade-in');
+  fadeObserver.observe(el);
+});
