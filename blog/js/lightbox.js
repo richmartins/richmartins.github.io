@@ -56,5 +56,12 @@
         show(el.src, el.alt);
       });
     });
+
+    document.querySelectorAll('.prose a').forEach(function (el) {
+      if (el.hostname && el.hostname !== window.location.hostname) {
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
   });
 })();

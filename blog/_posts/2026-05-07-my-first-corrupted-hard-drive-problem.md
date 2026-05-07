@@ -18,7 +18,7 @@ After opening the EventViewer in Windows, those were the errors
 
 ![eventviewer error](/assets/my_first_corrupted_hard_drive_exp/eventviewer_error.jpg)
 
-As a quick fix, we started using MS SQL backup system to dump the database(don't judge, sometimes there's just too many things to do), it worked for while but after a while, a user told the team that some analyses were not accessible anymore.
+As a quick fix, we started using MS SQL backup system to dump the database (don't judge, sometimes there's just too many things to do), it worked for while but after a while, a user told the team that some analyses were not accessible anymore.
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWlzOTdzYWwwdzBkZWR0NHY0dTNna29nbzFpbDd1c3FxN3Bra3BkMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/28UMYUOhdbOzAVtKiK/giphy.gif)
 
@@ -28,13 +28,13 @@ So hard drive has a bad block, pretty scary, but to fix things, it is often usef
 
 ### Lead 1 - EDR (it's always the AV fault right ?)
 
-Because we had just finished the configuration and the deployment of our new [Endpoint Detection and Response](https://en.wikipedia.org/wiki/Endpoint_detection_and_response) (EDR) system a week before. I jumped to the conclusion that the problem was probably due to the EDR agent analyzing / disturbing too much backup process when the backup agent tried to make a backup. So the pretty straightforward thing to do was to disable the agent and try to do backup, right? guess what, it didn't work! Then I thought ok, uninstall completely the EDR agent, also didn't work. At that moment, I realized I was up for a ride.
+Because we had just finished the configuration and the deployment of our new [Endpoint Detection and Response](https://en.wikipedia.org/wiki/Endpoint_detection_and_response) (EDR) system a week before. I jumped to the conclusion that the problem was probably due to the EDR agent analyzing / disturbing too much the backup process when the agent tried to make a it. So the pretty straightforward thing to do was to disable the agent and try to do backup, right? guess what, it didn't work! Then I thought ok, uninstall completely the EDR agent, also didn't work. At that moment, I realized I was up for a ride.
 
 ### Lead 2 - VSS
 
 After deep diving into a ton of error codes and logs, I identified that the problem was coming from a [Volume Shadow Copy Service](https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service) (VSS) provider not being able to read a snapshot. and oh boy! Every red flag should have started waving as soon as I read "not being able to read".
 
-So for those who aren't familiar with VSS, it's basically Windows offering you to manage exactly how a snapshot of disk volume that you want to snapshot is done and then just providing you the snapshot. Here is Microsoft's diagram that shows the architecture.
+So for those who aren't familiar with VSS, it's basically Windows offering you to manage exactly how a snapshot of disk volume that you want to backup is done. Here is Microsoft's diagram that shows the architecture.
 
 ![VSS Diagram](/assets/my_first_corrupted_hard_drive_exp/vss_diagram.jpg)
 
