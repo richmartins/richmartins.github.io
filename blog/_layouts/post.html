@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<main class="post-main">
+  <div class="post-container">
+    <a href="{{ "/" | relative_url }}" class="back-link"><i class="fas fa-arrow-left"></i> All posts</a>
+
+    <article class="post">
+      <header class="post-header">
+        <div class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+          {% if page.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.excerpt_text %}
+        <p class="post-lead">{{ page.excerpt_text }}</p>
+        {% endif %}
+      </header>
+
+      <div class="post-content prose">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>

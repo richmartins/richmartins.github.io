@@ -1,0 +1,23 @@
+title: Richard's Blog
+email: richard.martinstenorio@gmail.com
+description: Thoughts on tech, software engineering and cybersecurity by Richard Tenorio & more.
+baseurl: ""
+url: "https://blog.pavementlink.ch"
+github_username: richmartins
+main_site_url: "https://pavementlink.ch"
+
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        css_class: highlight
+
+plugins:
+    - jekyll-feed
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - vendor/

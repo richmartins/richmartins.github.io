@@ -1,18 +1,18 @@
-name: Main site CI
+name: Blog CI
 
 on:
   push:
     branches: [ "prod" ]
     paths:
-      - 'portfolio/**'
-      - 'Dockerfile.nginx'
-      - 'deployment/default.conf'
+      - 'blog/**'
+      - 'Dockerfile.blog.nginx'
+      - 'deployment/blog.conf'
   pull_request:
     branches: [ "prod" ]
     paths:
-      - 'portfolio/**'
-      - 'Dockerfile.nginx'
-      - 'deployment/default.conf'
+      - 'blog/**'
+      - 'Dockerfile.blog.nginx'
+      - 'deployment/blog.conf'
 
 jobs:
   build:
@@ -24,12 +24,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          working-directory: portfolio
+          working-directory: blog
           ruby-version: 3.3.0
           bundler-cache: true
 
       - name: Build with Jekyll
-        working-directory: portfolio
+        working-directory: blog
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
@@ -37,8 +37,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: site
-          path: ./portfolio/_site
+          name: blog-site
+          path: ./blog/_site
 
   publish-docker-image:
     needs: build
@@ -57,15 +57,15 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: site
+          name: blog-site
           path: ./_site
 
       - name: Build and push Docker Nginx image
         run: |
           docker buildx create --use
           docker buildx build \
-            --cache-from ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-nginx:latest \
-            --tag ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-nginx:latest \
+            --cache-from ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-blog-nginx:latest \
+            --tag ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}-blog-nginx:latest \
             --platform linux/amd64,linux/arm64 \
             --push \
-            --file Dockerfile.nginx .
+            --file Dockerfile.blog.nginx .
