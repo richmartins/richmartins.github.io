@@ -1,10 +1,18 @@
-name: Jekyll site CI
+name: Main site CI
 
 on:
   push:
     branches: [ "prod" ]
+    paths:
+      - 'portfolio/**'
+      - 'Dockerfile.nginx'
+      - 'deployment/default.conf'
   pull_request:
     branches: [ "prod" ]
+    paths:
+      - 'portfolio/**'
+      - 'Dockerfile.nginx'
+      - 'deployment/default.conf'
 
 jobs:
   build:
@@ -16,12 +24,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          working-directory: src
+          working-directory: portfolio
           ruby-version: 3.3.0
           bundler-cache: true
 
       - name: Build with Jekyll
-        working-directory: src
+        working-directory: portfolio
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
@@ -30,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: site
-          path: ./src/_site
+          path: ./portfolio/_site
 
   publish-docker-image:
     needs: build

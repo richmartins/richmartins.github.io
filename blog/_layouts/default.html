@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/favicon/apple-touch-icon.png" | relative_url }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon/favicon-32x32.png" | relative_url }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon/favicon-16x16.png" | relative_url }}" />
+  <link rel="manifest" href="{{ "/favicon/site.webmanifest" | relative_url }}" />
+  <link rel="mask-icon" href="{{ "/favicon/safari-pinned-tab.svg" | relative_url }}" color="#38bdf8" />
+  <link rel="shortcut icon" href="{{ "/favicon/favicon.ico" | relative_url }}" />
+  <meta name="theme-color" content="#0a0f1e" />
+
+  <link rel="stylesheet" href="{{ "/styles/main.css" | relative_url }}" />
+  <title>{% if page.title %}{{ page.title }} &mdash; {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="{{ site.main_site_url }}">RT<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="{{ "/" | relative_url }}">Blog</a></li>
+      <li><a href="{{ site.main_site_url }}" class="nav-cta">Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+{{ content }}
+
+{% include footer.html %}
+
+</body>
+</html>

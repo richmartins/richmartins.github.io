@@ -1,2 +1,8 @@
 # Garbage OS
 .DS_Store
+
+# Jekyll build outputs
+src/_site/
+blog/_site/
+src/.jekyll-cache/
+blog/.jekyll-cache/

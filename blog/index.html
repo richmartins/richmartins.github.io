@@ -1,0 +1,41 @@
+---
+layout: default
+title: Blog
+description: Thoughts on tech, CTFs, and engineering by Richard Tenorio.
+---
+<main class="blog-main">
+  <div class="blog-container">
+    <header class="blog-header">
+      <h1 class="blog-title">Blog</h1>
+      <p class="blog-subtitle">Thoughts on tech, CTFs, and engineering.</p>
+    </header>
+
+    {% if site.posts.size == 0 %}
+    <p class="empty-state">No posts yet. Check back soon.</p>
+    {% else %}
+    <div class="post-list">
+      {% for post in site.posts %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {% if post.tags.size > 0 %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <h2 class="post-card-title">{{ post.title }}</h2>
+        {% if post.excerpt_text %}
+        <p class="post-card-excerpt">{{ post.excerpt_text }}</p>
+        {% else %}
+        <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+        <span class="post-card-cta">Read more <i class="fas fa-arrow-right"></i></span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</main>
