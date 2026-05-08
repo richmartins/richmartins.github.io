@@ -12,6 +12,6 @@ This blog is where I'll document things I find interesting: infrastructure exper
 
 ## What to expect
 
-- **Short takes** — observations that don't fit anywhere else.
-- **Engineering notes** — setup guides, debugging sessions, architecture decisions worth capturing.
-- **CTF writeups** — post-competition analysis of challenges I found interesting or frustrating.
+- **Short takes** : observations and weird takes that I might have.
+- **Engineering notes** : setup guides, debugging sessions, architecture decisions worth capturing.
+- **CTF writeups** : post-competition analysis of challenges I found interesting or frustrating.

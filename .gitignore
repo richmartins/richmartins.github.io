@@ -4,3 +4,6 @@
 # Jekyll build outputs
 **/_site/
 **/.jekyll-cache/
+
+# IDe
+.vscode
