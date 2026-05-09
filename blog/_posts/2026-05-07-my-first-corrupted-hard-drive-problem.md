@@ -89,7 +89,8 @@ So how were we able to recover the database and the data inside it? Most of the 
 
 # Conclusion
 
-This disk was probably dying. I did some research, and a RAID wouldn't have saved it either, RAID protects against drive failure, not against silent page corruption that gets faithfully replicated to every mirror. The SQL patch was likely heavy in I/O operations on audit pages that hadn't been touched in a long time, and that's what surfaced sectors whose magnetic signal had quietly decayed.
+This disk was probably dying. ~~I did some research, and a RAID wouldn't have saved it either, RAID protects against drive failure, not against silent page corruption that gets faithfully replicated to every mirror.~~ <-- (discused in my first update [here](#update---1-2026-05-09)) The SQL patch was likely heavy in I/O operations on audit pages that hadn't been touched in a long time, and that's what surfaced sectors whose magnetic signal had quietly decayed.
+
 What did I learn? A few things:
 
 - Backups are not enough. You need to know your backups actually restore, and you need to verify the data they restore is good. We were lucky.
@@ -100,3 +101,17 @@ What did I learn? A few things:
 Side note: we had to take out the disk from the server and connect it to another computer with another OS running, because it had special SATA interface below is a picture of the cooling setup while it was recovering the bad sectors.
 
 ![new cooling tech](/assets/my_first_corrupted_hard_drive_exp/disk_new_cooling_tech.jpg)
+
+# Update - 1 (2026-05-09)
+
+After publishing this article on HN : [https://new.ycombinator.com/item?id=48067686](https://news.ycombinator.com/item?id=48067686), there were a few comments worth dicussing here.
+
+1. 
+    People were not happy with the fact that I said that a RAID wouldn't have  saved the situation, they said that if this server was using [Zettabyte File System](https://en.wikipedia.org/wiki/ZFS) (ZFS) and [Error correction code memory](https://en.wikipedia.org/wiki/ECC_memory) (ECC), the server would be protected against this kind of situation -> silent page corruption that gets faithfully replicated to every mirror. I did hear about ZFS in the past but I am no guru on the subject. I then read [this](https://klarasystems.com/articles/understanding-zfs-scrubs-and-data-integrity/) article and a few others and it confirms that ZFS would have helped a lot against the issue we had here. 
+    
+    The downside that I saw with ZFS is that it's very not recommended for Windows Server in Production, there is a project called [Open-ZFS](https://openzfs.org/wiki/Main_Page) which is having good results but it is still not recommended. Windows Server is mandatory in this case because of the vendor's specifications and algonside the database, there's a instrument server sevice running which controls the lab instruments and this s a Windows binary.
+1. Not enough monitoring : This is just simple truth, we monitor if services are up but that's about it, we are not enough granular and should have more monitoring !
+1. Me using AI : This is just stupid, using AI for anything in 2026 shouldn't be a debate anymore. The only wrong correlation here is thinking that if you use AI you don't learn. But that's a subject for another time.
+1. What to keep in mind : People in the comments were talking like everything is AAA company with unlimited resources, that's not the case here and context is everything.
+
+Nonetheless, I learned a lot from sharing this on HN, and I was glad to see that it interested people from all over the world.
