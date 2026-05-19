@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <meta name="description" content="{{ page.excerpt_text | default: page.description | default: site.description }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{{ page.excerpt_text | default: page.description | default: site.description }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  {% if page.layout == 'post' %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description" content="{{ page.excerpt_text | default: page.description | default: site.description }}" />
 
   <!-- Stats -->
   <script defer src="https://stats.pavementlink.ch/script.js" data-website-id="18faf05b-235a-4068-8945-c9166a5a0aae"></script>
