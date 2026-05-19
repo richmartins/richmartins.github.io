@@ -74,11 +74,11 @@ That was also the time where I lost all hope in recovering any data from this di
 
 We tried anyway a few software and even paid for those below.
 
-## EaseUS
+### EaseUS
 
 The famous [EaseUS](https://www.easeus.com/), Even the paid version couldn't repair them. We bought it so you don't have to :).
 
-## HDD Regenerator (Dmitriy Primochenko)
+### HDD Regenerator (Dmitriy Primochenko)
 
 After searching for a while, we came across [HDD Regenerator](https://www.dposoft.net), which claims it can recover data from bad sectors on magnetic disks using a special algorithm. We gave it a try, even though the website looks like a huge scam, because we had nothing left to lose. And it worked.
 
@@ -106,12 +106,12 @@ Side note: we had to take out the disk from the server and connect it to another
 
 After publishing this article on HN : [https://new.ycombinator.com/item?id=48067686](https://news.ycombinator.com/item?id=48067686), there were a few comments worth dicussing here.
 
-1. 
-    People were not happy with the fact that I said that a RAID wouldn't have  saved the situation, they said that if this server was using [Zettabyte File System](https://en.wikipedia.org/wiki/ZFS) (ZFS) and [Error correction code memory](https://en.wikipedia.org/wiki/ECC_memory) (ECC), the server would be protected against this kind of situation -> silent page corruption that gets faithfully replicated to every mirror. I did hear about ZFS in the past but I am no guru on the subject. I then read [this](https://klarasystems.com/articles/understanding-zfs-scrubs-and-data-integrity/) article and a few others and it confirms that ZFS would have helped a lot against the issue we had here. 
-    
+1.  People were not happy with the fact that I said that a RAID wouldn't have saved the situation, they said that if this server was using [Zettabyte File System](https://en.wikipedia.org/wiki/ZFS) (ZFS) and [Error correction code memory](https://en.wikipedia.org/wiki/ECC_memory) (ECC), the server would be protected against this kind of situation -> silent page corruption that gets faithfully replicated to every mirror. I did hear about ZFS in the past but I am no guru on the subject. I then read [this](https://klarasystems.com/articles/understanding-zfs-scrubs-and-data-integrity/) article and a few others and it confirms that ZFS would have helped a lot against the issue we had here.
+
     The downside that I saw with ZFS is that it's very not recommended for Windows Server in Production, there is a project called [Open-ZFS](https://openzfs.org/wiki/Main_Page) which is having good results but it is still not recommended. Windows Server is mandatory in this case because of the vendor's specifications and algonside the database, there's a instrument server sevice running which controls the lab instruments and this s a Windows binary.
-1. Not enough monitoring : This is just simple truth, we monitor if services are up but that's about it, we are not enough granular and should have more monitoring !
-1. Me using AI : This is just stupid, using AI for anything in 2026 shouldn't be a debate anymore. The only wrong correlation here is thinking that if you use AI you don't learn. But that's a subject for another time.
-1. What to keep in mind : People in the comments were talking like everything is AAA company with unlimited resources, that's not the case here and context is everything.
+
+1.  Not enough monitoring : This is just simple truth, we monitor if services are up but that's about it, we are not enough granular and should have more monitoring !
+1.  Me using AI : This is just stupid, using AI for anything in 2026 shouldn't be a debate anymore. The only wrong correlation here is thinking that if you use AI you don't learn. But that's a subject for another time.
+1.  What to keep in mind : People in the comments were talking like everything is AAA company with unlimited resources, that's not the case here and context is everything.
 
 Nonetheless, I learned a lot from sharing this on HN, and I was glad to see that it interested people from all over the world.

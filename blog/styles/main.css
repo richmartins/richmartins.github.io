@@ -324,6 +324,12 @@ img { max-width: 100%; display: block; }
     padding-top: 2rem;
 }
 
+.prose h1,
+.prose h2,
+.prose h3 {
+    scroll-margin-top: 80px;
+}
+
 .prose h2 {
     font-size: 1.35rem;
     font-weight: 600;
