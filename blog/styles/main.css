@@ -105,10 +105,81 @@ img { max-width: 100%; display: block; }
     padding: 4rem 1.5rem 6rem;
 }
 
-.blog-container,
-.post-container {
+.blog-container {
     max-width: var(--max);
     margin: 0 auto;
+}
+
+/* Post page two-column layout */
+.post-layout {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.post-layout .post-container {
+    flex: 1;
+    min-width: 0;
+    max-width: var(--max);
+}
+
+/* TOC sidebar */
+.toc-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.toc-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-3);
+    margin-bottom: 0.75rem;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li { margin-bottom: 0.2rem; }
+
+.toc-list a {
+    font-size: 0.8rem;
+    color: var(--text-2);
+    line-height: 1.4;
+    display: block;
+    padding: 0.18rem 0 0.18rem 0.65rem;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.toc-list a:hover { color: var(--text); }
+
+.toc-list a.toc-active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+}
+
+.toc-list .toc-h3 a {
+    padding-left: 1.4rem;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 1100px) {
+    .toc-sidebar { display: none; }
+    .post-layout {
+        max-width: var(--max);
+        margin: 0 auto;
+    }
 }
 
 /* Blog index header */
